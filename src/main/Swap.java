@@ -9,7 +9,19 @@ public class Swap {
 		System.out.println("Before Swap:- a1:" + a1 + "; a2:" + a2);
 		swap(a1, a2);
 		
-		
+		/**
+		 * The values are printed as a1:test1 and a2:test2
+		 * This is because in a1 contains the address 0xABCD
+		 *                    a2 contains the address 0xEFGH
+		 * after swapping	  a1 contains the address 0xEFGH
+		 * and 	              a2 contains the address 0xABCD     
+		 * but when we set animal1.name="test2";then basically
+		 * 						0xEFGH contains value test2
+		 * 						0xABCD contains value test1
+		 * Hence, we are getting:
+		 * After Swap:- a1:test1; a2:test2
+		 * 
+		 */
 		System.out.println("After Swap:- a1:" + a1 + "; a2:" + a2);
 		
 //		put( "platypus", a1 );
@@ -42,8 +54,8 @@ public class Swap {
 		System.out.println("Finally---->");
 		System.out.println("animal 1 is now: "+animal1.toString());
 		System.out.println("animal 2 is now: "+animal2.toString());
-		animal1.name="test1";
-		animal2.name="test2";
+		animal1.name="test2";
+		animal2.name="test1";
 		System.out.println("--------------------------------------------------");
 		System.out.println("Finally, finally---->");
 		System.out.println("animal 1 is now: "+animal1.toString());
